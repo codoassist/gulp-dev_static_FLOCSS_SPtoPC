@@ -105,7 +105,7 @@ const jsUglify = () => {
     .pipe(uglify()) // JavaScript圧縮
     .pipe(dest(distPath.js))
     .pipe(notify({ // エラー発生時のアラート出力
-      message: 'JavaScriptを圧縮しました！',
+      message: 'JavaScriptを圧縮してるんやで〜！',
       onLast: true
     }));
 };
