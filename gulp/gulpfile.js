@@ -9,7 +9,7 @@ const srcPath = {
     `${srcBase}/js/**/*.js`,
     `!${srcBase}/js/swiper-bundle.min.js`,
     `!${srcBase}/js/**/swiper-bundle.min.min.js`,
-  ], // jsのminファイルを除外
+  ], // jsのminファイルを除外 
   jsUnminified: `${srcBase}/js/swiper-bundle.min.js`,
 };
 const distPath = {
@@ -145,7 +145,7 @@ const jsUglify = () => {
     );
 };
 
-// JavaScriptそのまま出力
+// 未圧縮のJavaScriptファイルをそのまま出力
 const jsCopy = (done) => {
   src(srcPath.jsUnminified, { allowEmpty: true })
     .pipe(
@@ -191,7 +191,7 @@ const clean = (done) => {
   done();
 };
 
-// デフォルトタスク
+// デフォルトタ���ク
 exports.default = series(
   clean,
   imgImagemin,
